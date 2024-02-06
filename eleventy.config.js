@@ -100,6 +100,9 @@ module.exports = function(eleventyConfig) {
 
 	// eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
 
+  // Year shortcode
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
 	return {
 		// Control which files Eleventy will process
 		// e.g.: *.md, *.njk, *.html, *.liquid
